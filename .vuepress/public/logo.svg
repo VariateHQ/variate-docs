@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1273px" height="1248px" viewBox="0 0 1273 1248" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>∞</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="5.72516801%" y1="43.6411111%" x2="94.1516829%" y2="43.6411111%" id="linearGradient-1">
+            <stop stop-color="#FB5D7E" offset="0%"></stop>
+            <stop stop-color="#6B82FB" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Logo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-family="Hind-SemiBold, Hind SemiBold" font-size="2000" font-weight="500">
+        <g id="Custom-Preset-2" transform="translate(-375.000000, -360.000000)" fill="url(#linearGradient-1)">
+            <g id="∞" transform="translate(-834.000000, -610.000000)">
+                <text transform="translate(1720.390799, 1720.390799) rotate(45.000000) translate(-1720.390799, -1720.390799) ">
+                    <tspan x="888.390799" y="2229.3908">∞</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

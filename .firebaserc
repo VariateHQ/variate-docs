@@ -1,0 +1,23 @@
+{
+  "projects": {
+    "default": "variate-staging-cfff6",
+    "staging": "variate-staging-cfff6",
+    "production": "variate-883c3"
+  },
+  "targets": {
+    "variate-staging-cfff6": {
+      "hosting": {
+        "docs": [
+          "variate-docs-staging"
+        ]
+      }
+    },
+    "variate-883c3": {
+      "hosting": {
+        "docs": [
+          "variate-docs"
+        ]
+      }
+    }
+  }
+}

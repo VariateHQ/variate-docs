@@ -1,0 +1,27 @@
+{
+  "name": "variate-docs",
+  "version": "1.0.0",
+  "description": "Variate documentation",
+  "main": "index.md",
+  "scripts": {
+    "dev": "vuepress dev",
+    "build": "vuepress build"
+  },
+  "author": "“Valentin Prugnaud <valentin@variate.ca> (http://twitter.com/valentinprngd)",
+  "license": "MIT",
+  "dependencies": {
+    "vuepress": "^1.2.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
+    "cz-conventional-changelog": "^3.0.2",
+    "husky": "^3.0.9",
+    "standard-version": "^7.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
