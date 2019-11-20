@@ -1,5 +1,5 @@
 module.exports = {
-    title: 'Variate',
+    title: 'variate',
     description: 'The developer-friendly A/B testing tool',
     head: [
         ['link', { rel: 'icon', href: `/logo.png` }],
@@ -36,6 +36,12 @@ module.exports = {
                 }
             },
         }
+    },
+    postcss: {
+        plugins: [
+            require("autoprefixer"),
+            require("tailwindcss")("./tailwind.config.js")
+        ]
     }
 };
 

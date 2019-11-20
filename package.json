@@ -10,6 +10,8 @@
   "author": "“Valentin Prugnaud <valentin@variate.ca> (http://twitter.com/valentinprngd)",
   "license": "MIT",
   "dependencies": {
+    "autoprefixer": "^9.7.2",
+    "tailwindcss": "^1.1.3",
     "vuepress": "^1.2.0"
   },
   "devDependencies": {
