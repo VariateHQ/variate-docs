@@ -1,6 +1,6 @@
 <template>
-    <div class="home">
-        <header class="relative py-16">
+    <div class="home flex flex-col">
+        <header class="relative flex flex-col flex-grow justify-center h-full py-16">
             <div class="heroBackground"><span></span><span></span><span></span></div>
             <div class="header relative p-0 z-10">
                 <h1 v-if="data.heroText !== null" id="main-title"
@@ -61,7 +61,7 @@ export default {
 .heroBackground {
     width: 100%;
     height: 110%;
-    top: -10%;
+    top: 0;
     overflow: hidden;
     position: absolute;
     transform: skewY(-9deg);
