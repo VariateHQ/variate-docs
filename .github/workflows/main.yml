@@ -36,7 +36,7 @@ jobs:
     - run: npm install -g firebase-tools
     - run: firebase --version
     - run: firebase -V
-    - run: firebase deploy --project production --token ${{ secrets.NPM_AUTH_TOKEN }} --only hosting
+    - run: firebase deploy --project production --token ${{ secrets.FIREBASE_TOKEN }} --only hosting
       env:
         FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
   deploy-production:
@@ -54,6 +54,6 @@ jobs:
         name: dist
     - run: npm install -g firebase-tools
     - run: firebase -V
-    - run: firebase deploy --project production --token ${{ secrets.NPM_AUTH_TOKEN }} --only hosting
+    - run: firebase deploy --project production --token ${{ secrets.FIREBASE_TOKEN }} --only hosting
       env:
         FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
