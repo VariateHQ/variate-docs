@@ -34,8 +34,8 @@ jobs:
       uses: actions/download-artifact@v1
       with:
         name: dist
+        path: .vuepress/dist
     - run: npm install -g firebase-tools
-    - run: firebase --version
     - run: firebase -V
     - run: firebase deploy --project production --token ${{ secrets.FIREBASE_TOKEN }} --only hosting
       env:
@@ -54,6 +54,7 @@ jobs:
       uses: actions/download-artifact@v1
       with:
         name: dist
+        path: .vuepress/dist
     - run: npm install -g firebase-tools
     - run: firebase -V
     - run: firebase deploy --project production --token ${{ secrets.FIREBASE_TOKEN }} --only hosting
