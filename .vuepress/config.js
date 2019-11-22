@@ -13,6 +13,7 @@ module.exports = {
         ['meta', { name: 'msapplication-TileColor', content: '#000000' }]
     ],
     themeConfig: {
+        websiteUrl: 'https://variate.ca',
         repo: 'VariateApp/variate-docs',
         editLinks: true,
         smoothScroll: true,

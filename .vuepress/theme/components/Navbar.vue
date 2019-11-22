@@ -2,12 +2,19 @@
     <header class="navbar" :class="transparent ? 'bg-transparent' : ''">
         <SidebarButton @toggle-sidebar="$emit('toggle-sidebar')"/>
 
-        <router-link :to="$localePath" class="home-link">
+        <router-link :to="$localePath" class="home-link" v-if="!websiteUrl">
             <img class="logo" v-if="$site.themeConfig.logo" :src="$withBase($site.themeConfig.logo)" :alt="$siteTitle">
             <span ref="siteName" class="site-name" v-if="$siteTitle" :class="{ 'can-hide': $site.themeConfig.logo }">
               {{ $siteTitle }}
             </span>
         </router-link>
+
+        <a :href="websiteUrl" class="home-link" v-else>
+            <img class="logo" v-if="$site.themeConfig.logo" :src="$withBase($site.themeConfig.logo)" :alt="$siteTitle">
+            <span ref="siteName" class="site-name" v-if="$siteTitle" :class="{ 'can-hide': $site.themeConfig.logo }">
+              {{ $siteTitle }}
+            </span>
+        </a>
 
         <div class="links" :style="linksWrapMaxWidth ? {
         'max-width': linksWrapMaxWidth + 'px'
@@ -28,6 +35,10 @@ import NavLinks from '@theme/components/NavLinks.vue';
 
 export default {
     props: {
+        websiteUrl: {
+            type: String,
+            default: () => null,
+        },
         transparent: {
             type: Boolean,
             default: () => false

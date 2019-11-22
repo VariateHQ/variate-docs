@@ -1,6 +1,6 @@
 <template>
   <div class="theme-container" :class="pageClasses" @touchstart="onTouchStart" @touchend="onTouchEnd">
-    <Navbar v-if="shouldShowNavbar" @toggle-sidebar="toggleSidebar" transparent />
+    <Navbar v-if="shouldShowNavbar" @toggle-sidebar="toggleSidebar" :website-url="$site.themeConfig.websiteUrl" transparent />
 
     <div
       class="sidebar-mask"
