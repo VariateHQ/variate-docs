@@ -19,7 +19,7 @@ jobs:
       uses: actions/upload-artifact@v1
       with:
         name: dist
-        path: .vuepress/dist/
+        path: .vuepress/dist
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
@@ -27,7 +27,7 @@ jobs:
     - uses: actions/setup-node@v1
       with:
         node-version: '12.x'
-    - name: Download math result for job 1
+    - name: Download dist/
       uses: actions/download-artifact@v1
       with:
         name: dist
