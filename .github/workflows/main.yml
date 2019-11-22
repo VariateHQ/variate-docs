@@ -14,4 +14,4 @@ jobs:
         node-version: '12.x'
     - name: Build with vuepress
       run: |
-        vuepress -v
+        npm run build
