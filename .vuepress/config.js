@@ -27,7 +27,7 @@ module.exports = {
                 lastUpdated: 'Last Updated',
                 nav: require('./nav/en'),
                 sidebar: {
-                    '/guide/': getGuideSidebar(),
+                    '/overview/': getOverviewSidebar(),
                     '/engine/': getVariateEngineSidebar(),
                     '/react/': getVariateReactSidebar(),
                     '/vue/': getVariateVueSidebar(),
@@ -46,7 +46,7 @@ module.exports = {
     }
 };
 
-function getGuideSidebar() {
+function getOverviewSidebar() {
     return [
         {
             title: 'Getting Started',
