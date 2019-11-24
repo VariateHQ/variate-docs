@@ -4,9 +4,8 @@ on: [push]
 
 jobs:
   build:
-
+    name: Build
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v1
     - uses: actions/setup-node@v1
@@ -14,4 +13,50 @@ jobs:
         node-version: '12.x'
     - name: Build with vuepress
       run: |
-        vuepress -v
+        npm ci
+        npm run build
+    - name: Upload dist/
+      uses: actions/upload-artifact@v1
+      with:
+        name: dist
+        path: .vuepress/dist
+  deploy-staging:
+    needs: build
+    name: Deploy to staging
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/develop'
+    steps:
+    - uses: actions/checkout@v1
+    - uses: actions/setup-node@v1
+      with:
+        node-version: '12.x'
+    - name: Download dist/
+      uses: actions/download-artifact@v1
+      with:
+        name: dist
+        path: .vuepress/dist
+    - run: npm install -g firebase-tools
+    - run: firebase -V
+    - run: firebase deploy --project staging --token ${{ secrets.FIREBASE_TOKEN }} --only hosting
+      env:
+        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+  deploy-production:
+    needs: build
+    name: Deploy to production
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/master'
+    steps:
+    - uses: actions/checkout@v1
+    - uses: actions/setup-node@v1
+      with:
+        node-version: '12.x'
+    - name: Download dist/
+      uses: actions/download-artifact@v1
+      with:
+        name: dist
+        path: .vuepress/dist
+    - run: npm install -g firebase-tools
+    - run: firebase -V
+    - run: firebase deploy --project production --token ${{ secrets.FIREBASE_TOKEN }} --only hosting
+      env:
+        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
