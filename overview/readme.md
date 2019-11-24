@@ -26,4 +26,4 @@ ButtonText| Get Started | Continue | Click Here|
 
 This is a very simple example. You can imagine this same approach being expanded to more elements per component as well as more complex logic (e.g. layout variations of a component) and/or multiple components, either as part of an a/b or mvt test. 
 
-#### Get started with [Variate for Vuejs](/vue/) or [Variate for React](/react/)
+#### Get started with [Variate for Vue.js](/vue/) or [Variate for React](/react/)
