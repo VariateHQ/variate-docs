@@ -1,7 +1,7 @@
 module.exports = [
     {
-        text: "Guide",
-        link: "/guide/"
+        text: "Overview",
+        link: "/overview/"
     },
     {
         text: "Engine",
