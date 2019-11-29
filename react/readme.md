@@ -2,7 +2,7 @@
 title: Introduction
 ---
 
-# Variate for React.js
+## Variate for React.js
 
 Variate comes in the form of an [open source plugin for React](https://github.com/VariateApp/variate-react).
 

@@ -1,5 +1,0 @@
-## Components
-
-### Variate Component
-
-### useVariate

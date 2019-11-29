@@ -80,11 +80,9 @@ function getVariateReactSidebar() {
             children: [
                 '',
                 'installation',
-                'settings',
-                'components',
-                'audiences',
-                'tracking',
-                'preview'
+                'core-concepts',
+                'faq',
+                'changelogs',
             ]
         }
     ];

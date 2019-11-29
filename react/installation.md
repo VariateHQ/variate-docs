@@ -1,5 +1,14 @@
 ## Installation
 
+<style lang="css">
+  .class-name {
+    color: #194d33 !important;
+  }
+   .tag {
+     color: red !important;
+   }
+</style>
+
 ```
 npm install @variate/react 
 ```
