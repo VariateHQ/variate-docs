@@ -20,48 +20,11 @@ yarn add @variate/react
 ## Quick Start
 
 ::: tip
-In this quick start, we will be using hooks to provide variate data to components. However, if this doesn't work for your team, don't worry, we have other implementation methods. These will be explained later in the docs.
-::: 
-
-Simply create a valid and empty config.json file to get started.
-
-```json
-{}
-```
-
-Wrap the VariateProvider around your components in the root component. Then activate variate on the first view loaded in the onViewChange, if using a routing library, lets listen to the history and reactivate variate between view changes.
-
-```jsx
-...
-import React from 'react';
-import { VariateProvider } from '@variate/react';
-import config from 'config.json';
-...
-
-const history = createBrowserHistory();
-
-const App = () => (
-  <VariateProvider 
-    config={config} 
-    debug={true} 
-    tracking={true}
-    onViewChange={activate => {
-      activate({ view: window.location.pathname });
-      history.listen(location => activate({ view: location.pathname }));
-    }}
-  >
-    <Router history={history} />
-  </VariateProvider>
-)
-
-``` 
-
-To verify that Variate has been initialized, take a look at Chrome Dev Tools. If you see the following message, then you are all set up!
-
-<img :src="$withBase('/variate-vue-initialized.png')" alt="You should see a message in your Chrome Dev Tools that confirms that Variate has been initialized.">
+In this quick start, we will be using hooks to provide variate data to components. However, if hooks dont work for your team, don't worry, we have other implementation methods. These will be explained later in the docs.
+:::
 
 ### Create your first experiment
-Update your `config.json` file with the following content if you want to view a sample experiment immediately:
+Create a `variate.json` file with the following sample config.
 
 ```json
 {
@@ -91,7 +54,8 @@ Update your `config.json` file with the following content if you want to view a 
                             "HomeHero": {
                                 "id": 1,
                                 "attributes": {
-                                    "headline": "The A/B testing tool for the modern web"
+                                    "headline": "The A/B testing tool for the modern web",
+                                    "backgroundColor": "#779ecb"
                                 }
                             }
                         }
@@ -106,7 +70,8 @@ Update your `config.json` file with the following content if you want to view a 
                             "HomeHero": {
                                 "id": 1,
                                 "attributes": {
-                                    "headline": "The A/B testing tool that marketers and developers can agree on"
+                                    "headline": "The A/B testing tool that marketers and developers can agree on",
+                                    "backgroundColor": "#77dd77"
                                 }
                             }
                         }
@@ -118,28 +83,75 @@ Update your `config.json` file with the following content if you want to view a 
 }
 ```
 
-Use the Variate hook in a component that renders on the homepage. Pass it the name of the component specified in the config and some default content in case an the experiment is not running.
+Wrap the VariateProvider around your components in the root component. Then activate variate on the first view loaded in the onViewChange, if using a routing library, listen to any history changes and reactivate variate between them.
+
+```jsx
+...
+import React from 'react';
+import { VariateProvider } from '@variate/react';
+import config from './variate.json';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { createBrowserHistory } from 'history';
+...
+
+const history = createBrowserHistory();
+
+const App = () => (
+  <VariateProvider 
+    config={config} 
+    debug={true} 
+    tracking={true}
+    onViewChange={activate => {
+      activate({ view: window.location.pathname });
+      history.listen(location => activate({ view: location.pathname }));
+    }}
+  >
+    <Router history={history}>
+      ...
+    </Router>
+  </VariateProvider>
+)
+
+``` 
+
+To verify that Variate has been initialized, take a look at Chrome Dev Tools. If you see the following message, then you are all set up!
+
+<img :src="$withBase('/variate-vue-initialized.png')" alt="You should see a message in your Chrome Dev Tools that confirms that Variate has been initialized.">
+
+Now it's time to add your first variate component. Use the Variate hook in a component that renders on the homepage. Pass it the name of the component specified in the config and some default content in case an experiment is not running.
+
+::: tip
+In this example, we are using styled-components to modify the variations styles. The implementation of styles will changed based on the library your team is using.
+:::
 
 ```jsx
 ...
 import React from 'react';
 import { useVariate } from '@variate/react';
+import styled from 'styled-components';
 ...
+
+const HeroContainer = styled.section`
+  height: 400px;
+  width: 100%;
+  backgroundColor: ${props => props.backgroundColor};
+`;
 
 const Hero = ({ defaultContent }) => {
 
   const { content } = useVariate('HomeHero', defaultContent);
   
   return (
-    <section>
+    <HeroContainer backgroundColor={content.backgroundColor}>
       <h1>{content.headline}</h1>
-    </section>
+    </HeroContainer>
   )
 }
 
 Hero.defaultProps = {
   defaultContent: {
-    headline: 'This is the original boring headline, it would be awesome if we tested it!'
+    headline: 'This is the original boring headline, it would be awesome if we tested it!',
+    backgroundColor: '#fff'
   }
 }
 

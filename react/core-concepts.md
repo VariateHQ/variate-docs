@@ -1,4 +1,4 @@
-### Core Concepts
+# Core Concepts
 
 <style lang="css">
   .class-name {
@@ -15,10 +15,39 @@
   We are currently working on the Variate Dashboard app. Therefore feel free to modify the config file from the quick start section until then.  
 :::
 
-Every site has a corresponding config file. The config file is a JSON representation of the state of all experiments and components within a site. When an experiment is publish the datafile will automatically be updated on Variate's CDN (please refer to the dashboard).
+Every site has a corresponding config file. The config file is a JSON representation of the state of all experiments and components within a site. When an experiment is publish the config file will automatically be updated on Variate's CDN (please refer to the dashboard). [Learn more about the config file.](/engine/configuration.html)
 
 ## Components
-There are two ways to implement variate within your components. The examples are below:
+
+### VariateProvider
+```jsx
+...
+import React from 'react';
+import { VariateProvider } from '@variate/react';
+import config from './variate.json';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { createBrowserHistory } from 'history';
+...
+
+const history = createBrowserHistory();
+
+const App = () => (
+  <VariateProvider 
+    config={config} 
+    debug={true} 
+    tracking={true}
+    onViewChange={activate => {
+      activate({ view: window.location.pathname });
+      history.listen(location => activate({ view: location.pathname }));
+    }}
+  >
+    <Router history={history}>
+      ...
+    </Router>
+  </VariateProvider>
+)
+
+```
 
 ### useVariate
 ```jsx
@@ -72,7 +101,7 @@ Hero.defaultProps = {
 
 ## Tracking
 
-Tracking events can be done from any component by calling the track method. Event types can be a `revenue` type or a `custom` type and can have extra value passed to them.
+Tracking events can be done from any component by calling the track method on variate. Event types can be either a `revenue` or `custom` type and can have extra data passed to them.
 
 ```jsx
 ...
@@ -91,7 +120,7 @@ const Hero = ({ defaultContent }) => {
         name: 'Purchases',
         type: 'revenue',
         value: {
-          bonzai: 'Nah'
+          amount: 1000 
         },
       })}>Track this</button>
     </section>
@@ -120,7 +149,7 @@ const StrangeComponent = ({ defaultContent }) => {
   return (
     <section>
       <button onPress={() => variate.track({
-        name: 'Clicked This',
+        name: 'clicked_strange',
         type: 'custom',
       })}>Track this</button>
     </section>
