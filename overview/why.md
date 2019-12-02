@@ -20,6 +20,6 @@ The logic to bucket a visitor into a variation happens prior to any visual eleme
 
 This means that if you are replacing one background image with another, the original background image never starts loading: only the variation background image will ever be loaded by the visitor's browser. 
 
-### Easy integration with modern front-end frameworks
-Variate currently comes in the form of a plugin for either Vue.js or React. Controlling what components and what attributes of components can be tested is very easy for any developer. 
+### Integration with modern front-end frameworks
+Variate currently comes in the form of a plugin for either Vue.js or React. Developers have full control over what components and what attributes of components can be tested. 
 #### Get started with [Variate for Vue.js](/vue/) or [Variate for React](/react/)
