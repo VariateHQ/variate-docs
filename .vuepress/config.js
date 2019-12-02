@@ -97,7 +97,7 @@ function getVariateVueSidebar() {
             collapsable: false,
             children: [
                 '',
-                'installation',
+                'tracking',
             ]
         }
     ];
