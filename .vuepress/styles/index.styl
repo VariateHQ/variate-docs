@@ -12,11 +12,14 @@ html, body
 
 .theme-container h1, h2, h3, h4, h5, h6
     font-family Poppins, sans-serif
+    position: relative
+    padding-top: 5rem
 
     .header-anchor
         @apply text-pink-500
-
-.container 
+.theme-container h1
+    padding-top: 0;
+.container
     @apply px-10
 
 .page h1, h2, h3, h4, h5, h6
@@ -60,8 +63,19 @@ h6
 ul
     @apply list-disc ml-5
 
-.container a 
+.container a
     @apply text-pink-500
 
-a.header-anchor 
+a.header-anchor
     @apply pr-0
+
+* + h2, * + h3, div + h2, div + h3
+    margin-top: 0rem
+h2
+    margin-top: -5rem
+h1 + h2
+    margin-top: -2rem
+h2 ~ h3
+    margin-top: -4rem !important
+h2 + h3
+    margin-top: -4rem !important;

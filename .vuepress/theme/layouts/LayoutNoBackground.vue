@@ -1,5 +1,5 @@
 <template>
-  <div class="theme-container" :class="pageClasses" @touchstart="onTouchStart" @touchend="onTouchEnd">
+  <div class="theme-container home" :class="pageClasses" @touchstart="onTouchStart" @touchend="onTouchEnd">
     <Navbar v-if="shouldShowNavbar" @toggle-sidebar="toggleSidebar" :website-url="$site.themeConfig.websiteUrl" transparent />
 
     <div
