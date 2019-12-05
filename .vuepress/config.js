@@ -92,7 +92,7 @@ function getVariateReactSidebar() {
 function getVariateVueSidebar() {
     return [
         {
-            title: 'Getting Started',
+            title: 'Variate Vue Plugin',
             collapsable: false,
             children: [
                 '',
