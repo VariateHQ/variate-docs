@@ -13,8 +13,8 @@ The Variate plugin for Vue.js comes in two parts:
 **The Vue.js Plugin** This is what makes it possible to integrate that logic inside of your Vue.js application. 
 
 ## Installation
-::: warning Nuxt
-Variate for Vue does not currently support sites running Nuxt.
+::: tip Nuxt
+Running Nuxt? We recommend reading the [Nuxt-specific plugin](nuxt.html) documentation instead.
 :::
 ::: tip Demo Site
 In this guide, we will be using this [Vue demo website](https://github.com/VariateApp/variate-vue-demo-saas) to install the Variate plugin. Feel free to [clone the repo](https://github.com/VariateApp/variate-vue-demo-saas), and run it locally (reference the readme). 
