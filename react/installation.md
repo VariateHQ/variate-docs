@@ -19,11 +19,15 @@ yarn add @variate/react
 
 ## Quick Start
 
-::: tip
+::: warning
 In this quick start, we will be using hooks to provide variate data to components. However, if hooks dont work for your team, don't worry, we have other implementation methods. These will be explained later in the docs.
 :::
 
-### Create your first experiment
+::: tip Clone Demo Site
+  In this guide, we will be using this [React Demo Site](https://github.com/VariateApp/variate-react-demo) to install the Variate plugin. Feel free to install it locally and use it as a playground for the following steps.
+:::
+
+### Add the config file
 Create a `variate.json` file with the following sample config.
 
 ```json
@@ -82,8 +86,8 @@ Create a `variate.json` file with the following sample config.
     }
 }
 ```
-
-Wrap the VariateProvider around your components in the root component. Then activate variate on the first view loaded in the onViewChange, if using a routing library, listen to any history changes and reactivate variate between them.
+### Add a Variate Provider
+Wrap the VariateProvider around your components in the root component. If your using react-router, activate variate on the first view loaded and on page changes. [Click here](http://0.0.0.0:8080/react/core-concepts.html#targeting) for example of how to initialize without react-router
 
 ```jsx
 ...
@@ -116,7 +120,9 @@ const App = () => (
 
 To verify that Variate has been initialized, take a look at Chrome Dev Tools. If you see the following message, then you are all set up!
 
-<img :src="$withBase('/variate-vue-initialized.png')" alt="You should see a message in your Chrome Dev Tools that confirms that Variate has been initialized.">
+<img :src="$withBase('/variate-react-initialized.png')" alt="You should see a message in your Chrome Dev Tools that confirms that Variate has been initialized.">
+
+### Add your first Variate Component
 
 Now it's time to add your first variate component. Use the Variate hook in a component that renders on the homepage. Pass it the name of the component specified in the config and some default content in case an experiment is not running.
 
@@ -139,11 +145,11 @@ const HeroContainer = styled.section`
 
 const Hero = ({ defaultContent }) => {
 
-  const { content } = useVariate('HomeHero', defaultContent);
+  const { variables } = useVariate('HomeHero', defaultContent);
   
   return (
-    <HeroContainer backgroundColor={content.backgroundColor}>
-      <h1>{content.headline}</h1>
+    <HeroContainer backgroundColor={variables.backgroundColor}>
+      <h1>{variables.headline}</h1>
     </HeroContainer>
   )
 }
