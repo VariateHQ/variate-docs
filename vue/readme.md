@@ -106,7 +106,7 @@ To set up an experiment using the [Vue demo site](https://github.com/VariateApp/
                 "variations": [
                     {
                         "id": 1,
-                        "traffic_allocation": {
+                        "trafficAllocation": {
                             "max": 50,
                             "min": 0
                         },
@@ -121,7 +121,7 @@ To set up an experiment using the [Vue demo site](https://github.com/VariateApp/
                     },
                     {
                         "id": 2,
-                        "traffic_allocation": {
+                        "trafficAllocation": {
                             "max": 100,
                             "min": 51
                         },
@@ -199,7 +199,7 @@ Variate assigns each visitor an `experimentBucket`. This is a random number from
 "variations": [
     {
         "id": 1,
-        "traffic_allocation": {
+        "trafficAllocation": {
             "max": 50,
             "min": 1
         },
@@ -214,7 +214,7 @@ Variate assigns each visitor an `experimentBucket`. This is a random number from
     },
     {
         "id": 2,
-        "traffic_allocation": {
+        "trafficAllocation": {
             "max": 100,
             "min": 51
         },
@@ -250,7 +250,7 @@ To guarantee that all visitors will see only one variation, update the `min` and
 "variations": [
     {
         "id": 1,
-        "traffic_allocation": {
+        "trafficAllocation": {
             "max": 0,
             "min": 0
         },
@@ -265,7 +265,7 @@ To guarantee that all visitors will see only one variation, update the `min` and
     },
     {
         "id": 2,
-        "traffic_allocation": {
+        "trafficAllocation": {
             "max": 100,
             "min": 1
         },
