@@ -21,7 +21,7 @@ In this guide, we will be using this [Vue demo website](https://github.com/Varia
 ::: 
 
 ### Install the Variate for Vue package
-[Follow along on GitHub](https://github.com/VariateApp/variate-vue-demo-saas/commit/6416597cd468b134b35746141d29471d71923dec)
+[Follow along on GitHub](https://github.com/VariateApp/variate-vue-demo-saas/commit/bc5a36c57047746d27bf37b673f261b3b8065a0f)
 
 ```bash
 npm install @variate/vue
