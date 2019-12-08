@@ -92,10 +92,11 @@ function getVariateReactSidebar() {
 function getVariateVueSidebar() {
     return [
         {
-            title: 'Getting Started',
+            title: 'Variate For Vue',
             collapsable: false,
             children: [
                 '',
+                'nuxt',
                 'tracking',
             ]
         }
