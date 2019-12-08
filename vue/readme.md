@@ -82,7 +82,7 @@ To verify that Variate has been initialized, open Chrome Dev Tools. This is the 
 <img :src="$withBase('/variate-vue-initialized.png')" alt="You should see a message in your Chrome Dev Tools that confirms that Variate has been initialized.">
 
 ## First Experiment
-[Follow along on GitHub](https://github.com/VariateApp/variate-vue-demo-saas/commit/0ee98a4a31a54fb15b94b76c629953cc3c6d3d46)
+[Follow along on GitHub](https://github.com/VariateApp/variate-vue-demo-saas/commit/f5c1d45d50435825c2b3cbba017f86c4775d4195)
 
 To set up an experiment using the [Vue demo site](https://github.com/VariateApp/variate-vue-demo-saas), update `variate.json` with the following: 
 
