@@ -97,6 +97,7 @@ function getVariateVueSidebar() {
             children: [
                 '',
                 'tracking',
+                'reporting',
             ]
         }
     ];
