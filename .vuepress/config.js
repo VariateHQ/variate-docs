@@ -98,6 +98,7 @@ function getVariateVueSidebar() {
                 '',
                 'nuxt',
                 'tracking',
+                'reporting',
             ]
         }
     ];
