@@ -2,9 +2,41 @@
 
 Here we will explore how to report the results of Variate experiments.
 
-## Built-In Reporting
+### Choose a Reporting Method
+We give you the following options: 
+- Use the Variate [built-in reporting](#built-in-reporter)
+- Use a [custom reporter](#custom-reporter)
+
+## Built-In Reporter
 :::warning Coming Soon
-Built-in experiment reporting is still in development. 
+Built-in experiment reporting is still in development. In the meantime, we recommend using a [custom reporter](#custom-reporter). 
+:::
+
+## Custom Reporter
+To use a custom reporter (or multiple reporters), Variate provides a `reporter` method that can be used inside of the `Vue.use(Variate, [options])` method. 
+
+When Variate is initialized in a Vue application, it may look like this: 
+
+```js
+Vue.use(Variate, {
+  debug: true,
+  config
+});
+```
+
+By default, Variate will send events to its [built-in reporter](#built-in-reporter). To change this behavior, add the `reporter` method, which accepts `event` as argument: 
+
+```js
+Vue.use(Variate, {
+  debug: true,
+  reporter(event) {
+    console.log(event);
+  },
+  config
+});
+```
+:::tip Types of Events
+To better understand the various types of events that may be sent, see the [Tracking](tracking.html) section. 
 :::
 
 ## Google Analytics
