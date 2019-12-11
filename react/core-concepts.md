@@ -121,7 +121,6 @@ Variate must to be reinitalize between each page / view change to target experim
 ### With the onViewChange method
 
 ```jsx
-
 <VariateProvider
   onViewChange={activate => { 
     activate({ view: window.location.pathname });
@@ -129,13 +128,11 @@ Variate must to be reinitalize between each page / view change to target experim
 }>
   ...
 </VariateProvider>
-
 ```
 
 ### Without the onViewChange method
 
 ```jsx
-
 const App = () => {
   <VariateProvider>
     (({ variate }) => {
@@ -146,7 +143,6 @@ const App = () => {
     })
   </VariateProvider>
 }
-
 ```
 
 ## Tracking
@@ -211,7 +207,6 @@ const StrangeComponent = ({ defaultContent }) => {
     </section>
   )
 }
-
 ```
 
 ## Force a Variation
@@ -227,38 +222,40 @@ There are currently two ways to "force" or preview a specific variation of an ex
 Variate assigns each visitor an `experimentBucket`. This is a random number from 1 to 100. Each variation in an experiment targets a range of that number. In the [example experiment](#first-experiment), there are two variations, each set up to receive an even 50/50 split of traffic. The `min` and `max` on each variation refer to the smallest and greatest `experimentBucket` for which that variation will appear. 
 
 ```json
-"variations": [
-                    {
-                        "id": 1,
-                        "traffic_allocation": {
-                            "max": 50,
-                            "min": 1
-                        },
-                        "components": {
-                            "HomeHero": {
-                                "id": 1,
-                                "attributes": {
-                                    "headline": "The A/B testing tool for the modern web"
-                                }
-                            }
-                        }
-                    },
-                    {
-                        "id": 2,
-                        "traffic_allocation": {
-                            "max": 100,
-                            "min": 51
-                        },
-                        "components": {
-                            "HomeHero": {
-                                "id": 1,
-                                "attributes": {
-                                    "headline": "The A/B testing tool that marketers and developers can agree on"
-                                }
-                            }
-                        }
-                    }
-                ]
+{
+  "variations": [
+      {
+          "id": 1,
+          "traffic_allocation": {
+              "max": 50,
+              "min": 1
+          },
+          "components": {
+              "HomeHero": {
+                  "id": 1,
+                  "attributes": {
+                      "headline": "The A/B testing tool for the modern web"
+                  }
+              }
+          }
+      },
+      {
+          "id": 2,
+          "traffic_allocation": {
+              "max": 100,
+              "min": 51
+          },
+          "components": {
+              "HomeHero": {
+                  "id": 1,
+                  "attributes": {
+                      "headline": "The A/B testing tool that marketers and developers can agree on"
+                  }
+              }
+          }
+      }
+  ]
+}
 ```
 
 The experiment bucket number is stored in local storage and is used in subsequent visits to check if a visitor is already bucketed into an experiment. If they are already bucketed, then they are not re-bucketed into a new variation. 

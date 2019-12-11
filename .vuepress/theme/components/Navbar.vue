@@ -4,14 +4,14 @@
 
         <router-link :to="$localePath" class="home-link" v-if="!websiteUrl">
             <img class="logo" v-if="$site.themeConfig.logo" :src="$withBase($site.themeConfig.logo)" :alt="$siteTitle">
-            <span ref="siteName" class="site-name" v-if="$siteTitle" :class="{ 'can-hide': $site.themeConfig.logo }">
+            <span ref="siteName" class="site-name lowercase" v-if="$siteTitle" :class="{ 'can-hide': $site.themeConfig.logo }">
               {{ $siteTitle }}
             </span>
         </router-link>
 
         <a :href="websiteUrl" class="home-link" v-else>
             <img class="logo" v-if="$site.themeConfig.logo" :src="$withBase($site.themeConfig.logo)" :alt="$siteTitle">
-            <span ref="siteName" class="site-name" v-if="$siteTitle" :class="{ 'can-hide': $site.themeConfig.logo }">
+            <span ref="siteName" class="site-name lowercase" v-if="$siteTitle" :class="{ 'can-hide': $site.themeConfig.logo }">
               {{ $siteTitle }}
             </span>
         </a>

@@ -52,7 +52,8 @@ module.exports = {
         },
         '@vuepress/search', {
             searchMaxSuggestions: 10
-        }
+        },
+        '@dovyp/vuepress-plugin-clipboard-copy'
     ]
 };
 
