@@ -40,6 +40,9 @@ To better understand the various types of events that may be sent, see the [Trac
 :::
 
 ## Google Analytics
+To send Variate events to Google Analytics, there are a number of ways to go about it. We will explore just a few of these methods below. 
+
+Below is an example of how Variate events can be sent as Google Analytics events while visitors also being added to a [Custom Dimension](https://support.google.com/analytics/answer/2709828).
 
 ```js
 Vue.use(Variate, {
@@ -48,35 +51,58 @@ Vue.use(Variate, {
   reporter: (event) => {
     console.log('Sending to Google Analytics: ' + event.name);
     console.log(event)
-    
+
     // Create tracker
-    ga('create', 'UA-XXX-X', 'auto');
-    
+    ga('create', 'UA-XXXX-X', 'auto');
+
     if (event.type === 'pageview') {
-      
-      // Set custom dimension [optional]
-      var customDimensionSlot = '1';
-      var customDimensionValue = 'Exp' + event.value.experimentId + '|Var' + event.value.variationId;
-      ga('set', 'dimension' + customDimensionSlot, customDimensionValue);
-      
-      // Send event, using your preferred naming convention
+
+      // Send pageview as nonInteraction event to avoid affecting bounce rate
       ga('send', {
         hitType: 'event',
         eventCategory: 'Variate Experiments',
-        eventAction: 'qualify',
-        eventLabel: 'Exp' + event.value.experimentId + '|Var' + event.value.variationId
+        eventAction: 'pageview',
+        eventLabel: 'Exp' + event.value.experimentId + '|Var' + event.value.variationId,
+        nonInteraction: true
       });
     }
     else {
 
-      // Send non-qualification event (not experiment-specific)
+      // Send custom/purchase event 
       ga('send', {
         hitType: 'event',
         eventCategory: 'Variate Experiments',
         eventAction: event.type,
-        eventLabel: event.name
+        eventLabel: event.name,
+        eventValue: event.value
       });
     }
+    return true
+  },
+  config
+});
 ```
+[Follow along on GitHub](https://github.com/VariateApp/variate-vue-demo-saas/commit/c0e57c359acd51be22aa81fa4bda9fbcd2d15cd7)
 
-## Segment
+Following the example shown in the GitHub link above, a visitor that qualifies for the Experiment being run and then clicking the "Read the Docs" button will produce the following events:
+
+<img :src="$withBase('/variate-vue-reporting-events.png')" alt="Events triggered by Variate experiment to be sent to Google Analytics.">
+
+Which will appear in Google Analytics as such: 
+
+<img :src="$withBase('/variate-vue-reporting-ga-events.png')" alt="Variate events, as they appear in Google Analytics.">
+
+### Tracking Experiments as Campaigns (Experimental)
+You may want to track experiments as Campaigns and Variations as Campaign Content. Below is how that could be achieved, using Filters. We strongly recommend creating a separate view to apply these filters such that other marketing campaign tracking is not affected. 
+
+**1.** Send pageview events to Google Analytics using a standard syntax as seen above. 
+
+**2.** Use filters to transform the Campaign field and Campaign Content fields, as seen below. 
+
+Convert Variate pageview to variate_pageview (or any other unique string):
+<img :src="$withBase('/variate-reporting-ga-filter-1.png')" alt="Convert Variate pageview to variate_pageview">
+Convert variate_pageview to Campaign:
+<img :src="$withBase('/variate-reporting-ga-filter-2.png')" alt="Convert variate_pageview to Campaign">
+Convert variate_pageview to Campaign Content:
+<img :src="$withBase('/variate-reporting-ga-filter-3.png')" alt="Convert variate_pageview to Campaign Content">
+
