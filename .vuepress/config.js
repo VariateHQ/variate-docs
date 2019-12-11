@@ -1,8 +1,8 @@
 module.exports = {
-    title: 'variate',
+    title: 'Variate',
     description: 'The developer-friendly A/B testing tool',
     head: [
-        ['link', { rel: 'icon', href: `/logo.png` }],
+        ['link', { rel: 'icon', href: `/logo.svg` }],
         ['link', { rel: 'manifest', href: '/manifest.json' }],
         ['meta', { name: 'theme-color', content: '#FB5C7D' }],
         ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
