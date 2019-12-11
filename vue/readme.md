@@ -21,7 +21,7 @@ In this guide, we will be using this [Vue demo website](https://github.com/Varia
 ::: 
 
 ### Install the Variate for Vue package
-[Follow along on GitHub](https://github.com/VariateApp/variate-vue-demo-saas/commit/bc5a36c57047746d27bf37b673f261b3b8065a0f)
+[Follow along on GitHub](https://github.com/VariateApp/variate-vue-demo-saas/commit/4b2c7bb4a1e3edb67aac400efd0c35b9ed7e973b)
 
 ```bash
 npm install @variate/vue
@@ -43,7 +43,7 @@ Create a valid and empty json file to get started:
 ```
 
 ### Initialize the plugin
-[Follow along on GitHub](https://github.com/VariateApp/variate-vue-demo-saas/commit/f02b7403cc55c2660287b616f4944736d5db5b78)
+[Follow along on GitHub](https://github.com/VariateApp/variate-vue-demo-saas/commit/87c519820d2278ccf58a57feaf232db76e90b3ee)
 
 In `src/main.js` or where Vue is initialized in your application, add the following: 
 
@@ -82,7 +82,7 @@ To verify that Variate has been initialized, open Chrome Dev Tools. This is the 
 <img :src="$withBase('/variate-vue-initialized.png')" alt="You should see a message in your Chrome Dev Tools that confirms that Variate has been initialized.">
 
 ## First Experiment
-[Follow along on GitHub](https://github.com/VariateApp/variate-vue-demo-saas/commit/f5c1d45d50435825c2b3cbba017f86c4775d4195)
+[Follow along on GitHub](https://github.com/VariateApp/variate-vue-demo-saas/commit/19d1b20ba41909ddcb3ea376e21f844453e213ea)
 
 To set up an experiment using the [Vue demo site](https://github.com/VariateApp/variate-vue-demo-saas), update `variate.json` with the following: 
 
@@ -113,7 +113,7 @@ To set up an experiment using the [Vue demo site](https://github.com/VariateApp/
                         "components": {
                             "HomeHero": {
                                 "id": 1,
-                                "attributes": {
+                                "variables": {
                                     "headline": "The A/B testing tool for the modern web"
                                 }
                             }
@@ -128,7 +128,7 @@ To set up an experiment using the [Vue demo site](https://github.com/VariateApp/
                         "components": {
                             "HomeHero": {
                                 "id": 1,
-                                "attributes": {
+                                "variables": {
                                     "headline": "The A/B testing tool that marketers and developers can agree on"
                                 }
                             }
@@ -142,7 +142,7 @@ To set up an experiment using the [Vue demo site](https://github.com/VariateApp/
 ```
 
 #### Update the component being targeted
-[Follow along on GitHub](https://github.com/VariateApp/variate-vue-demo-saas/commit/057506854e4c17a63948199df084f5ce7f341581#diff-06e9c195ec81530a3de459fd4e5d9f85)
+[Follow along on GitHub](https://github.com/VariateApp/variate-vue-demo-saas/commit/f3431164e1dc782c19bde681ad74934b5bfdda2d)
 
 In the `variate.json` above, the component being targeted is `HomeHero`. That maps to the `HomeHero.vue` component (the area highlighted below): 
 
@@ -152,11 +152,11 @@ The variable being modified as part of the experiment above is `headline`. For t
 
 Add the following to `HomeHero.vue` in order to set a default value for `headline` that can be overridden by what is passed from Variate:
 ```js
-import { mapAttributes } from '@variate/vue';
+import { mapVariables } from '@variate/vue';
 
 export default {
     computed: {
-        ...mapAttributes({
+        ...mapVariables({
             headline: 'The developer-friendly a/b testing tool',
         }),
     },
@@ -206,7 +206,7 @@ Variate assigns each visitor an `experimentBucket`. This is a random number from
         "components": {
             "HomeHero": {
                 "id": 1,
-                "attributes": {
+                "variables": {
                     "headline": "The A/B testing tool for the modern web"
                 }
             }
@@ -221,7 +221,7 @@ Variate assigns each visitor an `experimentBucket`. This is a random number from
         "components": {
             "HomeHero": {
                 "id": 1,
-                "attributes": {
+                "variables": {
                     "headline": "The A/B testing tool that marketers and developers can agree on"
                 }
             }
@@ -257,7 +257,7 @@ To guarantee that all visitors will see only one variation, update the `min` and
         "components": {
             "HomeHero": {
                 "id": 1,
-                "attributes": {
+                "variables": {
                     "headline": "The A/B testing tool for the modern web"
                 }
             }
@@ -272,7 +272,7 @@ To guarantee that all visitors will see only one variation, update the `min` and
         "components": {
             "HomeHero": {
                 "id": 1,
-                "attributes": {
+                "variables": {
                     "headline": "The A/B testing tool that marketers and developers can agree on"
                 }
             }
