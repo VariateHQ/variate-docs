@@ -2,7 +2,7 @@ module.exports = {
     title: 'Variate',
     description: 'The developer-friendly A/B testing tool',
     head: [
-        ['link', { rel: 'icon', href: `/logo.svg` }],
+        ['link', { rel: 'icon', href: `/favicon.ico` }],
         ['link', { rel: 'manifest', href: '/manifest.json' }],
         ['meta', { name: 'theme-color', content: '#FB5C7D' }],
         ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
@@ -44,7 +44,11 @@ module.exports = {
             require("autoprefixer"),
             require("tailwindcss")("./tailwind.config.js")
         ]
-    }
+    },
+    plugins: ['@vuepress/pwa', {
+        serviceWorker: false,
+        updatePopup: false
+    }]
 };
 
 function getOverviewSidebar() {

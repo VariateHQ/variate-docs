@@ -1,0 +1,15 @@
+{
+    "short_name": "Variate",
+    "name": "Variate",
+    "description": "The developer-friendly A/B testing tool",
+    "icons": [
+        {
+            "src": "./favicon.ico",
+            "type": "image/x-icon"
+        }
+    ],
+    "start_url": "/",
+    "display": "fullscreen",
+    "theme_color": "#FB5C7D",
+    "background_color": "#ffffff"
+}
