@@ -45,10 +45,15 @@ module.exports = {
             require("tailwindcss")("./tailwind.config.js")
         ]
     },
-    plugins: ['@vuepress/pwa', {
-        serviceWorker: false,
-        updatePopup: false
-    }]
+    plugins: [
+        '@vuepress/pwa', {
+            serviceWorker: false,
+            updatePopup: false
+        },
+        '@vuepress/search', {
+            searchMaxSuggestions: 10
+        }
+    ]
 };
 
 function getOverviewSidebar() {

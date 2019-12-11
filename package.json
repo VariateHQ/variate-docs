@@ -11,6 +11,7 @@
   "license": "MIT",
   "dependencies": {
     "@vuepress/plugin-pwa": "^1.2.0",
+    "@vuepress/plugin-search": "^1.2.0",
     "autoprefixer": "^9.7.3",
     "tailwindcss": "^1.1.4",
     "vuepress": "^1.2.0"
