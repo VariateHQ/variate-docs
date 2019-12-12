@@ -87,14 +87,15 @@ function getVariateEngineSidebar() {
 function getVariateReactSidebar() {
     return [
         {
-            title: 'Getting Started',
+            title: 'Variate For React',
             collapsable: false,
             children: [
                 '',
-                'installation',
-                'core-concepts',
-                'faq',
-                'changelogs',
+                'config',
+                'targeting',
+                'components',
+                'tracking',
+                // 'reporting'
             ]
         }
     ];
@@ -108,6 +109,9 @@ function getVariateVueSidebar() {
             children: [
                 '',
                 'nuxt',
+                // 'config',
+                // 'targeting',
+                // 'components',
                 'tracking',
                 'reporting',
             ]
