@@ -4,7 +4,7 @@
             <div class="heroBackground"><span></span><span></span><span></span></div>
             <div class="header relative p-0 z-10">
                 <h1 v-if="data.heroText !== null" id="main-title"
-                    class="font-brand font-bold text-6xl mb-6 py-0 text-white ">
+                    class="font-brand font-bold text-6xl mb-6 py-0 text-white lowercase">
                     {{ data.heroText || $title || 'Hello' }}
                 </h1>
 

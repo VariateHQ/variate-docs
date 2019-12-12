@@ -3,7 +3,7 @@ home: true
 layout: LayoutNoBackground
 actionText: Get Started →
 actionLink: /overview/
-footer: MIT Licensed | Copyright © 2019-present Variate
+footer: BSL 1.1 Licensed | Copyright © 2019-present Variate
 ---
 
 <div class="features">
