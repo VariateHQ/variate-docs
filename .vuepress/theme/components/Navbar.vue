@@ -1,5 +1,5 @@
 <template>
-    <header class="navbar" :class="transparent ? 'bg-transparent' : ''">
+    <header class="navbar">
         <SidebarButton @toggle-sidebar="$emit('toggle-sidebar')"/>
 
         <router-link :to="$localePath" class="home-link" v-if="!websiteUrl">
@@ -126,11 +126,11 @@ $navbar-horizontal-padding = 1.5rem
     .logo
         height $navbarHeight - 1.4rem
         min-width $navbarHeight - 1.4rem
-        margin-right 0.8rem
         vertical-align top
 
     .site-name
-        @apply font-brand text-xl leading-none;
+        @apply text-3xl tracking-tighter lowercase;
+        font-family: Montserrat, sans-serif;
         color $textColor
         position relative
 

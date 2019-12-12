@@ -15,6 +15,7 @@ module.exports = {
     themeConfig: {
         sidebarDepth: 2,
         websiteUrl: 'https://variate.ca',
+        logo: '/variate-color-icon-transparent.svg',
         repo: 'VariateApp/variate-docs',
         editLinks: true,
         smoothScroll: true,
