@@ -1,14 +1,15 @@
 <template>
     <div class="home flex flex-col">
-        <header class="relative flex flex-col flex-grow justify-center h-full py-16">
-            <div class="heroBackground"><span></span><span></span><span></span></div>
-            <div class="header relative p-0 z-10">
+        <header class="relative flex flex-col flex-grow justify-center py-8">
+            <!-- <div class="heroBackground"><span></span><span></span><span></span></div> -->
+            <div class="text-center relative p-0 z-10">
                 <h1 v-if="data.heroText !== null" id="main-title"
-                    class="font-brand font-bold text-6xl mb-6 py-0 text-white lowercase">
+                    class="font-brand font-bold text-6xl mb-6 py-0 lowercase"
+                >
                     {{ data.heroText || $title || 'Hello' }}
                 </h1>
 
-                <p class="description text-2xl text-info-100 mb-8 leading-relaxed">
+                <p class="description text-2xl mb-8 leading-relaxed">
                     {{ data.tagline || $description || 'Welcome to your VuePress site' }}
                 </p>
 
