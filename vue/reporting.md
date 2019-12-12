@@ -106,3 +106,6 @@ Convert variate_pageview to Campaign:
 Convert variate_pageview to Campaign Content:
 <img :src="$withBase('/variate-reporting-ga-filter-3.png')" alt="Convert variate_pageview to Campaign Content">
 
+The final outcome will look something like this: 
+<img :src="$withBase('/variate-reporting-ga-campaign.png')" alt="View experiments as campaigns and variations as campaign content.">
+
