@@ -28,15 +28,19 @@ module.exports = [
                 items: [
                     {
                         text: "Contribute to Variate Engine",
-                        link: "https://github.com/VariateApp/variate-engine/blob/master/CONTRIBUTE"
+                        link: "https://github.com/VariateApp/variate-engine/blob/master/CONTRIBUTING.md"
                     },
                     {
                         text: "Contribute to Variate React",
-                        link: "https://github.com/VariateApp/variate-react/blob/master/CONTRIBUTE"
+                        link: "https://github.com/VariateApp/variate-react/blob/master/CONTRIBUTING.md"
                     },
                     {
                         text: "Contribute to Variate Vue",
-                        link: "https://github.com/VariateApp/variate-vue/blob/master/CONTRIBUTE"
+                        link: "https://github.com/VariateApp/variate-vue/blob/master/CONTRIBUTING.md"
+                    },
+                    {
+                        text: "Contribute to Variate Documentation",
+                        link: "https://github.com/VariateApp/variate-docs/blob/master/CONTRIBUTING.md"
                     },
                     {
                         text: "FAQ",
