@@ -12,7 +12,7 @@ The Variate plugin for React.js comes in two parts:
 
 **The Variate Context Library** This is what makes it easy to integrate that logic inside of your React.js application.
 
-The Variate React.js Library uses the Context API to access variate experiment data from React components. These are available both through a component or a custom hook. Read more about the context library [here](https://reactjs.org/docs/context.html)
+The Variate React.js Library uses the Context API to access variate experiment data from React components. These are available both through a component or a custom hook. Read more about the context library [here](https://reactjs.org/docs/context.html).
 
 ## Installation
 ```
@@ -26,7 +26,7 @@ yarn add @variate/react
 ## Quick Start
 
 ::: warning
-In this quick start, we will be using hooks to provide variate data to components. However, if hooks dont work for your team, don't worry, we have other implementation methods. These will be explained later in the docs.
+In this quick start, we will be using hooks to provide variate data to components. However, if hooks don't work for your team, don't worry, we have other implementation methods. These will be explained later in the docs.
 :::
 
 ::: tip Clone Demo Site
@@ -93,7 +93,7 @@ Create a `variate.json` file with the following sample config.
 }
 ```
 ### Add a Variate Provider
-Wrap the VariateProvider around your components in the root component. If your using react-router, activate variate on the first view loaded and on page changes. [Click here](http://0.0.0.0:8080/react/core-concepts.html#targeting) for example of how to initialize without react-router
+Wrap the VariateProvider around your components in the root component. If your using react-router, activate Variate on the first view loaded and on page changes. [Click here](http://0.0.0.0:8080/react/core-concepts.html#targeting) for an example on how to initialize without react-router.
 
 ```jsx
 ...
@@ -266,4 +266,4 @@ To guarantee that all visitors will see only one variation, update the `min` and
                     }
                 ]
 ```
-Now, all visitors will be bucketed into the same variation: 
+Now, all visitors will be bucketed into the same variation.
