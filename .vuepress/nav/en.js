@@ -52,7 +52,11 @@ module.exports = [
                 text: "Changelogs",
                 items: [
                     {
-                        text: "Varite Engine Changelog",
+                        text: "Variate Schema Changelog",
+                        link: "https://github.com/VariateApp/variate-schema/blob/master/CHANGELOG.md"
+                    },
+                    {
+                        text: "Variate Engine Changelog",
                         link: "https://github.com/VariateApp/variate-engine/blob/master/CHANGELOG.md"
                     },
                     {
