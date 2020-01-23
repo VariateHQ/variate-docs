@@ -29,7 +29,7 @@ module.exports = {
                 lastUpdated: 'Last Updated',
                 nav: require('./nav/en'),
                 sidebar: {
-                    '/overview/': getOverviewSidebar(),
+                    '/get-started/': getGetStartedSidebar(),
                     '/engine/': getVariateEngineSidebar(),
                     '/react/': getVariateReactSidebar(),
                     '/vue/': getVariateVueSidebar(),
@@ -58,14 +58,28 @@ module.exports = {
     ]
 };
 
-function getOverviewSidebar() {
+function getGetStartedSidebar() {
     return [
         {
-            title: 'Getting Started',
+            title: 'Get Started',
             collapsable: false,
             children: [
                 '',
-                'why'
+                'is-variate-right-for-you',
+                'how-it-works',
+                'sites',
+                'experiments',
+                'components',
+                'variables',
+                'variations',
+                'views',
+                'segments',
+                'metrics',
+                'environments',
+                'preview-variations',
+                'launch-variations',
+                'results',
+                'use-cases'
             ]
         }
     ]
