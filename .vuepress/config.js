@@ -78,7 +78,9 @@ function getVariateEngineSidebar() {
             collapsable: false,
             children: [
                 '',
-                'configuration',
+                'schema',
+                'deployment',
+                'webhook'
             ]
         }
     ];
