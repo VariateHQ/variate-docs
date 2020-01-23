@@ -2,16 +2,6 @@
 title: Getting Started
 ---
 
-## About the plugin
-
-Variate comes in the form of an [open source plugin for Vue.js](https://github.com/VariateApp/variate-vue).
-
-The Variate plugin for Vue.js comes in two parts: 
-
-**The Variate Engine** This is where the experimentation logic sits. 
-
-**The Vue.js Plugin** This is what makes it possible to integrate that logic inside of your Vue.js application. 
-
 ## Installation
 ::: tip Nuxt
 Running Nuxt? We recommend reading the [Nuxt-specific plugin](nuxt.html) documentation instead.
