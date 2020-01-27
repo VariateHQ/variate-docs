@@ -42,11 +42,15 @@ module.exports = {
     },
     postcss: {
         plugins: [
-            require("autoprefixer"),
-            require("tailwindcss")("./tailwind.config.js")
+            require('autoprefixer'),
+            require('tailwindcss')('./tailwind.config.js')
         ]
     },
     plugins: [
+        '@vuepress/google-analytics',
+        {
+            'ga': 'UA-152005393-1'
+        },
         '@vuepress/pwa', {
             serviceWorker: false,
             updatePopup: false
@@ -68,7 +72,7 @@ function getOverviewSidebar() {
                 'why'
             ]
         }
-    ]
+    ];
 }
 
 function getVariateEngineSidebar() {
