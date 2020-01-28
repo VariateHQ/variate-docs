@@ -77,7 +77,7 @@ function getGetStartedSidebar() {
                 'metrics',
                 'environments',
                 'preview-variations',
-                'launch-variations',
+                'launch-experiments',
                 'results',
                 'use-cases'
             ]
