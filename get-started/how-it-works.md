@@ -9,7 +9,7 @@ title: How it Works
 Below are the 3 primary steps to getting setup with Variate: 
 
 ### 1. Create your first experiment in Variate:
-- [Create an account on Variate](https://app.variate.ca/auth/register)
+- [Create a free account](https://app.variate.ca/auth/register)
 - Create a [site](/get-started/sites.html) where you will be you be doing your experimentation. A site has a development and production version of your experiments so that you can control when experiments are pushed to production. 
 - Create at least one [component](/get-started/components.html). In the context of Variate, a component can be any component you wish to experiment with. We suggest starting with something simple, like a `Banner`.
 - Add at least one [variable](/get-started/variables.html) to this component. A variable is a property/attribute of the component that you wish to experiment with. For example `h1Text`.
@@ -68,7 +68,7 @@ There are 3 primary ways to manage the file:
 - Use a webhook to fetch the latest version. 
 - Manually download the latest version (recommended if you wish to stay on the free plan). 
 
-Below is what the Schema looks like with single, simple experiment: 
+Below is what the Schema looks like with a single, simple experiment, containining one variation:
 
 ```json
 {
@@ -127,3 +127,6 @@ Below is what the Schema looks like with single, simple experiment:
     }
 }
 ```
+
+## Schema Validation
+To validate your schema (in case you are creating the Schema yourself without the Variate UI), you can use this repo: [VariateApp/variate-schema](https://github.com/VariateApp/variate-schema)
