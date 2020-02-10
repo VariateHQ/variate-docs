@@ -70,16 +70,15 @@ function getGetStartedSidebar() {
                 'sites',
                 'experiments',
                 'components',
-                'variables',
                 'variations',
                 'views',
                 'segments',
                 'metrics',
-                'environments',
                 'preview-variations',
                 'launch-experiments',
                 'results',
-                'use-cases'
+                'use-cases',
+                'tutorials'
             ]
         }
     ]
