@@ -29,8 +29,12 @@ By default, Variate will send events to its [built-in reporter](#built-in-report
 ```js
 Vue.use(Variate, {
   debug: true,
-  reporter(event) {
-    console.log(event);
+  tracking: {
+    enabled: true,
+    default: false,
+    reporter: async (event) {
+      console.log(event);
+    },
   },
   config
 });
@@ -47,37 +51,37 @@ Below is an example of how Variate events can be sent as Google Analytics events
 ```js
 Vue.use(Variate, {
   debug: true,
-  tracking: true,
-  reporter: (event) => {
-    console.log('Sending to Google Analytics: ' + event.name);
-    console.log(event)
-
-    // Create tracker
-    ga('create', 'UA-XXXX-X', 'auto');
-
-    if (event.type === 'pageview') {
-
-      // Send pageview as nonInteraction event to avoid affecting bounce rate
-      ga('send', {
-        hitType: 'event',
-        eventCategory: 'Variate Experiments',
-        eventAction: 'pageview',
-        eventLabel: 'Exp' + event.value.experimentId + '|Var' + event.value.variationId,
-        nonInteraction: true
-      });
-    }
-    else {
-
-      // Send custom/purchase event 
-      ga('send', {
-        hitType: 'event',
-        eventCategory: 'Variate Experiments',
-        eventAction: event.type,
-        eventLabel: event.name,
-        eventValue: event.value
-      });
-    }
-    return true
+  tracking: {
+    enabled: true,
+    default: false,
+    reporter: async (event) => {
+      console.log('Sending to Google Analytics: ' + event.name);
+      console.log(event)
+    
+       // Create tracker
+      ga('create', 'UA-XXXX-X', 'auto');
+    
+      if (event.type === 'pageview') {
+        // Send pageview as nonInteraction event to avoid affecting bounce rate
+        ga('send', {
+          hitType: 'event',
+          eventCategory: 'Variate Experiments',
+          eventAction: 'pageview',
+          eventLabel: 'Exp' + event.value.experimentId + '|Var' + event.value.variationId,
+          nonInteraction: true
+        });
+      } else {
+        // Send custom/purchase event 
+        ga('send', {
+          hitType: 'event',
+          eventCategory: 'Variate Experiments',
+          eventAction: event.type,
+          eventLabel: event.name,
+          eventValue: event.value
+        });
+      }
+      return true
+    },
   },
   config
 });

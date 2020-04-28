@@ -40,7 +40,7 @@ export default function ({ app: { $variate }, route }) {
 
 ### Initialize the plugin
 In `nuxt.config.js`, add the following:
-```js
+```javascript
 /*
   ** Plugins to load before mounting the App
   */
@@ -48,11 +48,12 @@ In `nuxt.config.js`, add the following:
 
   variate: {
     debug: true,
-    tracking: true,
-    pageview: true,
-    reporter: () => {
-        // your custom reporting function
-    }   
+    pageview: false,
+    tracking: {
+        enabled: true,
+        default: false,
+        reporter: async() => true
+    }, 
   }
 
   router: {

@@ -44,7 +44,13 @@ import Variate from '@variate/vue';
 ...
 Vue.use(Variate, {
     debug: true,
-    tracking: true,
+    tracking: {
+      enabled: true,
+      default: false,
+      reporter(event) {
+        console.log(event);
+      },
+    },
     config,
 });
 ```
