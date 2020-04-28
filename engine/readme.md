@@ -14,3 +14,5 @@ It will be responsible for multiple things:
 - It will allow you to track events to Variate or any custom analytics solution of your choice
 
 Check out our [React](/react) and [Vue.js](/vue) documentation pages to learn how to use the Engine methods from your components.
+
+You can also learn more about our engine by checking the [reference documentation on GitHub](https://variateapp.github.io/variate-engine/) 
