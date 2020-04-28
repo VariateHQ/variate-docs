@@ -1,15 +1,19 @@
 # Tracking
 
 Here we will explore how to set up tracking of experiments in Variate for Vue.
-## Enablement
-By default, Variate will track all visitors unless `navigator.doNotTrack` is set to `'1'`.
 
-To controle the enablement of tracking, use the following line: 
+## Enablement
+
+By default, Variate will track all visitors unless they enabled `navigator.doNotTrack`.
+
+To control the enablement of tracking, use the following line: 
 
 ```js
 Vue.use(Variate, {
-    tracking: true, // If set to false, no tracking events will be triggered by Variate
-...
+    tracking: {
+        enabled: false, // If set to false, no tracking events will be triggered by Variate
+    }, 
+    ...
 });
 ```
 **Potential use cases:**
@@ -28,7 +32,6 @@ this.$variate.track(name, type, [value])
 ```js
 this.$variate.track('myButton_click', 'custom')
 ```
-
 
 **Example**: to track a purchase
 
@@ -54,7 +57,6 @@ If you followed the [Quick Start](/vue/#quick-start), you may have initialized V
 ```js
 Vue.use(Variate, {
   debug: true,
-  tracking: true,
   config,
 });
 ```
@@ -65,7 +67,6 @@ If you prefer to track pageviews manually (for all experiments), then add `pagev
 ```js
 Vue.use(Variate, {
   debug: true,
-  tracking: true,
   pageview: false, // Pageviews will not be automatically recorded
   config,
 });

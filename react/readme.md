@@ -2,18 +2,6 @@
 title: Getting Started
 ---
 
-Variate comes in the form of an [open source plugin for React](https://github.com/VariateApp/variate-react).
-
-## About the plugin
-
-The Variate plugin for React.js comes in two parts: 
-
-**The Variate Engine** This is where the experimentation logic sits. 
-
-**The Variate Context Library** This is what makes it easy to integrate that logic inside of your React.js application.
-
-The Variate React.js Library uses the Context API to access variate experiment data from React components. These are available both through a component or a custom hook. Read more about the context library [here](https://reactjs.org/docs/context.html).
-
 ## Installation
 ```
 npm install @variate/react 
@@ -23,9 +11,7 @@ OR
 yarn add @variate/react
 ```
 
-## Quick Start
-
-::: warning
+::: warning Using Hooks
 In this quick start, we will be using hooks to provide variate data to components. However, if hooks don't work for your team, don't worry, we have other implementation methods. These will be explained later in the docs.
 :::
 
@@ -33,6 +19,9 @@ In this quick start, we will be using hooks to provide variate data to component
   In this guide, we will be using this [React Demo Site](https://github.com/VariateApp/variate-react-demo) to install the Variate plugin. Feel free to install it locally and use it as a playground for the following steps.
 :::
 
+::: tip Context API
+The Variate React.js Library uses the Context API to access variate experiment data from React components. These are available both through a component or a custom hook. Read more about the context library [here](https://reactjs.org/docs/context.html).
+:::
 ## First Experiment
 Create a `variate.json` file with the following sample config.
 

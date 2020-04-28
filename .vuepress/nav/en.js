@@ -1,7 +1,7 @@
 module.exports = [
     {
-        text: "Overview",
-        link: "/overview/"
+        text: "Get Started",
+        link: "/get-started/"
     },
     {
         text: "Engine",
