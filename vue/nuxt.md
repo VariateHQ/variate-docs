@@ -4,7 +4,7 @@ title: Nuxt
 
 ## Installation
 ::: tip Demo Site
-In this guide, we will be using this [Nuxt demo website](https://github.com/VariateApp/variate-nuxt-demo) to install the Variate Nuxt module. Feel free to [clone the repo](https://github.com/VariateApp/variate-nuxt-demo), and run it locally (reference the readme). 
+In this guide, we will be using this [Nuxt demo website](https://github.com/VariateHQ/variate-nuxt-demo) to install the Variate Nuxt module. Feel free to [clone the repo](https://github.com/VariateHQ/variate-nuxt-demo), and run it locally (reference the readme). 
 ::: 
 
 ### Install the Variate for Nuxt package
@@ -17,7 +17,7 @@ npm install @variate/nuxt
 
 ### Create a starter config file
 
-Create a file called `variate.json` in the source directory of your Nuxt project ([as seen here](https://github.com/VariateApp/variate-nuxt-demo/tree/master/app)) with valid  json to get started:
+Create a file called `variate.json` in the source directory of your Nuxt project ([as seen here](https://github.com/VariateHQ/variate-nuxt-demo/tree/master/app)) with valid  json to get started:
 ```json
 // app/variate.json
 {}

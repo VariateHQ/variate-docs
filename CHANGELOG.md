@@ -7,9 +7,9 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Features
 
-* redesign ([cdf1eeb](https://github.com/VariateApp/variate-docs/commit/cdf1eeb02b40b79c1311c5ada08f43da914cb372))
+* redesign ([cdf1eeb](https://github.com/VariateHQ/variate-docs/commit/cdf1eeb02b40b79c1311c5ada08f43da914cb372))
 
 
 ### Bug Fixes
 
-* fix header ([65cadb4](https://github.com/VariateApp/variate-docs/commit/65cadb461ddf0668cac57e53ed5ec86c13b164d2))
+* fix header ([65cadb4](https://github.com/VariateHQ/variate-docs/commit/65cadb461ddf0668cac57e53ed5ec86c13b164d2))

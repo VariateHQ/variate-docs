@@ -28,10 +28,10 @@ Pull requests are the best way to propose changes to the codebase (we use [Githu
 5. Make sure your code lints.
 6. Issue that pull request!
 
-## Report bugs or request features using Github [Issues](https://github.com/VariateApp/variate-docs/issues)
+## Report bugs or request features using Github [Issues](https://github.com/VariateHQ/variate-docs/issues)
 
 We use GitHub issues to track public bugs. Report a bug by [opening a new issue]().
 
 ## License
 
-By contributing, you agree that your contributions will be licensed under its [MIT License](https://github.com/VariateApp/variate-docs/blob/master/LICENSE).
+By contributing, you agree that your contributions will be licensed under its [MIT License](https://github.com/VariateHQ/variate-docs/blob/master/LICENSE).

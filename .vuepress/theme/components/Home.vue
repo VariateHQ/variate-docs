@@ -4,7 +4,7 @@
             <!-- <div class="heroBackground"><span></span><span></span><span></span></div> -->
             <div class="text-center relative p-0 z-10">
                 <h1 v-if="data.heroText !== null" id="main-title"
-                    class="font-brand font-bold text-6xl mb-6 py-0 lowercase"
+                    class="font-brand font-bold tracking-tighter text-6xl mb-6 py-0"
                 >
                     {{ data.heroText || $title || 'Hello' }}
                 </h1>
@@ -14,7 +14,7 @@
                 </p>
 
                 <p v-if="data.actionText && data.actionLink">
-                    <NavLink class="bg-pink-500 hover:bg-pink-600 text-lg font-semibold text-white py-3 px-5 rounded"
+                    <NavLink class="bg-bluegray-500 hover:bg-blue-500 text-lg font-semibold text-white py-3 px-5 rounded transition duration-300 ease-in-out"
                              :item="actionLink"/>
                 </p>
             </div>
@@ -99,7 +99,11 @@ export default {
 }
 
 .features .feature a {
-    color: theme('colors.pink.500');
+    transition: all .3s ease-in-out;
+    color: theme('colors.bluegray.500');
+}
+.features .feature a:hover {
+    color: theme('colors.blue.500');
 }
 
 .footer {

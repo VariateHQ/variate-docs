@@ -4,14 +4,14 @@
 
         <router-link :to="$localePath" class="home-link" v-if="!websiteUrl">
             <img class="logo" v-if="$site.themeConfig.logo" :src="$withBase($site.themeConfig.logo)" :alt="$siteTitle">
-            <span ref="siteName" class="site-name lowercase" v-if="$siteTitle" :class="{ 'can-hide': $site.themeConfig.logo }">
+            <span ref="siteName" class="site-name tracking-tight font-brand" v-if="$siteTitle" :class="{ 'can-hide': $site.themeConfig.logo }">
               {{ $siteTitle }}
             </span>
         </router-link>
 
         <a :href="websiteUrl" class="home-link" v-else>
             <img class="logo" v-if="$site.themeConfig.logo" :src="$withBase($site.themeConfig.logo)" :alt="$siteTitle">
-            <span ref="siteName" class="site-name lowercase" v-if="$siteTitle" :class="{ 'can-hide': $site.themeConfig.logo }">
+            <span ref="siteName" class="site-name tracking-tight font-brand" v-if="$siteTitle" :class="{ 'can-hide': $site.themeConfig.logo }">
               {{ $siteTitle }}
             </span>
         </a>
@@ -129,7 +129,7 @@ $navbar-horizontal-padding = 1.5rem
         vertical-align top
 
     .site-name
-        @apply text-3xl tracking-tighter lowercase;
+        @apply text-3xl tracking-tighter;
         font-family: Montserrat, sans-serif;
         color $textColor
         position relative

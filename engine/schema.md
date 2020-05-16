@@ -6,7 +6,7 @@ title: Schema
 
 The **Variate Schema** is the JSON file that describes all your experiments to the Variate Engine. This file will list all your experiments, variations, components and variables.
 
-The structure of this schema is versioned, check out our [Variate Schema repository](https://github.com/VariateApp/variate-schema) to learn more.
+The structure of this schema is versioned, check out our [Variate Schema repository](https://github.com/VariateHQ/variate-schema) to learn more.
 
 Here is an example: 
 

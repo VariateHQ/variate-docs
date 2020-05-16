@@ -16,21 +16,21 @@ html, body
     @apply font-bold
 
     .header-anchor
-        @apply text-pink-500
+        @apply text-navy-500
 .theme-container h1
     padding-top: 0;
 .container
     @apply px-10
 
 .page h1, h2, h3, h4, h5, h6
-    @apply mb-2 mt-4 
+    @apply mb-2 mt-4 tracking-tighter
 
 .page p
     @apply mt-4 mb-6
 
 .page blockquote
     @apply italic
-    border-color theme('colors.pink.500')
+    border-color theme('colors.navy.500')
     border-left-width 5px
 
     p
@@ -64,11 +64,11 @@ ul
     @apply list-disc ml-5
 
 .container a
-    @apply text-pink-500
+    @apply text-navy-500
 
 a.header-anchor
     @apply pr-0
-h2 
+h2
     margin-top: -5rem
 * + h2, div + h2, div + h3, * + h3
     margin-top: -4rem
@@ -82,7 +82,7 @@ h2 + h3 + h4
 .content__default > *:not(h1):not(h2):not(h3):not(h4)
     @apply relative z-20
 
-h1, h2, h3, h4 
+h1, h2, h3, h4
     @apply z-10
 
 .navbar

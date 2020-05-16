@@ -28,19 +28,19 @@ module.exports = [
                 items: [
                     {
                         text: "Contribute to Variate Engine",
-                        link: "https://github.com/VariateApp/variate-engine/blob/master/CONTRIBUTING.md"
+                        link: "https://github.com/VariateHQ/variate-engine/blob/master/CONTRIBUTING.md"
                     },
                     {
                         text: "Contribute to Variate React",
-                        link: "https://github.com/VariateApp/variate-react/blob/master/CONTRIBUTING.md"
+                        link: "https://github.com/VariateHQ/variate-react/blob/master/CONTRIBUTING.md"
                     },
                     {
                         text: "Contribute to Variate Vue",
-                        link: "https://github.com/VariateApp/variate-vue/blob/master/CONTRIBUTING.md"
+                        link: "https://github.com/VariateHQ/variate-vue/blob/master/CONTRIBUTING.md"
                     },
                     {
                         text: "Contribute to Variate Documentation",
-                        link: "https://github.com/VariateApp/variate-docs/blob/master/CONTRIBUTING.md"
+                        link: "https://github.com/VariateHQ/variate-docs/blob/master/CONTRIBUTING.md"
                     },
                     {
                         text: "FAQ",
@@ -53,23 +53,23 @@ module.exports = [
                 items: [
                     {
                         text: "Variate Schema Changelog",
-                        link: "https://github.com/VariateApp/variate-schema/blob/master/CHANGELOG.md"
+                        link: "https://github.com/VariateHQ/variate-schema/blob/master/CHANGELOG.md"
                     },
                     {
                         text: "Variate Engine Changelog",
-                        link: "https://github.com/VariateApp/variate-engine/blob/master/CHANGELOG.md"
+                        link: "https://github.com/VariateHQ/variate-engine/blob/master/CHANGELOG.md"
                     },
                     {
                         text: "Variate React Changelog",
-                        link: "https://github.com/VariateApp/variate-react/blob/master/CHANGELOG.md"
+                        link: "https://github.com/VariateHQ/variate-react/blob/master/CHANGELOG.md"
                     },
                     {
                         text: "Variate Vue Changelog",
-                        link: "https://github.com/VariateApp/variate-vue/blob/master/CHANGELOG.md"
+                        link: "https://github.com/VariateHQ/variate-vue/blob/master/CHANGELOG.md"
                     },
                     {
                         text: "Documentation Changelog",
-                        link: "https://github.com/VariateApp/variate-docs/blob/master/CHANGELOG.md"
+                        link: "https://github.com/VariateHQ/variate-docs/blob/master/CHANGELOG.md"
                     }
                 ]
             }

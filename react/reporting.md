@@ -90,7 +90,7 @@ Vue.use(Variate, {
   config
 });
 ```
-[Follow along on GitHub](https://github.com/VariateApp/variate-vue-demo-saas/commit/c0e57c359acd51be22aa81fa4bda9fbcd2d15cd7)
+[Follow along on GitHub](https://github.com/VariateHQ/variate-vue-demo-saas/commit/c0e57c359acd51be22aa81fa4bda9fbcd2d15cd7)
 
 Following the example shown in the GitHub link above, a visitor that qualifies for the Experiment being run and then clicking the "Read the Docs" button will produce the following events:
 

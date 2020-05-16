@@ -9,7 +9,7 @@ It is optimized for usage on single-page applications. It comes in the form of p
 
 Variate comes in 3 parts: 
 
-- An [Open Source Engine](https://github.com/VariateApp/variate-vue), which contains experimentation logic (qualification, bucketing, etc..). Learn more about the [Variate Engine](/engine/).
+- An [Open Source Engine](https://github.com/VariateHQ/variate-vue), which contains experimentation logic (qualification, bucketing, etc..). Learn more about the [Variate Engine](/engine/).
 
 - An Open Source framework-specific plugin to integrate with your web application
     - [React Plugin Docs](/react/)

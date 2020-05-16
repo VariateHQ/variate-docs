@@ -7,11 +7,11 @@ title: Getting Started
 Running Nuxt? We recommend reading the [Nuxt-specific plugin](nuxt.html) documentation instead.
 :::
 ::: tip Demo Site
-In this guide, we will be using this [Vue demo website](https://github.com/VariateApp/variate-vue-demo-saas) to install the Variate plugin. Feel free to [clone the repo](https://github.com/VariateApp/variate-vue-demo-saas), and run it locally (reference the readme). 
+In this guide, we will be using this [Vue demo website](https://github.com/VariateHQ/variate-vue-demo-saas) to install the Variate plugin. Feel free to [clone the repo](https://github.com/VariateHQ/variate-vue-demo-saas), and run it locally (reference the readme). 
 ::: 
 
 ### Install the Variate for Vue package
-[Follow along on GitHub](https://github.com/VariateApp/variate-vue-demo-saas/commit/4b2c7bb4a1e3edb67aac400efd0c35b9ed7e973b)
+[Follow along on GitHub](https://github.com/VariateHQ/variate-vue-demo-saas/commit/4b2c7bb4a1e3edb67aac400efd0c35b9ed7e973b)
 
 ```bash
 npm install @variate/vue
@@ -20,7 +20,7 @@ npm install @variate/vue
 ## Quick Start
 
 ### Create a starter config file
-[Follow along on GitHub](https://github.com/VariateApp/variate-vue-demo-saas/commit/6114cd65e569fc70f9445d7c34ec7001602f79c9)
+[Follow along on GitHub](https://github.com/VariateHQ/variate-vue-demo-saas/commit/6114cd65e569fc70f9445d7c34ec7001602f79c9)
 
 Inside of your project root directory, run the following in your terminal:
 ```bash
@@ -33,7 +33,7 @@ Create a valid and empty json file to get started:
 ```
 
 ### Initialize the plugin
-[Follow along on GitHub](https://github.com/VariateApp/variate-vue-demo-saas/commit/87c519820d2278ccf58a57feaf232db76e90b3ee)
+[Follow along on GitHub](https://github.com/VariateHQ/variate-vue-demo-saas/commit/87c519820d2278ccf58a57feaf232db76e90b3ee)
 
 In `src/main.js` or where Vue is initialized in your application, add the following: 
 
@@ -78,9 +78,9 @@ To verify that Variate has been initialized, open Chrome Dev Tools. This is the 
 <img :src="$withBase('/variate-vue-initialized.png')" alt="You should see a message in your Chrome Dev Tools that confirms that Variate has been initialized.">
 
 ## First Experiment
-[Follow along on GitHub](https://github.com/VariateApp/variate-vue-demo-saas/commit/19d1b20ba41909ddcb3ea376e21f844453e213ea)
+[Follow along on GitHub](https://github.com/VariateHQ/variate-vue-demo-saas/commit/19d1b20ba41909ddcb3ea376e21f844453e213ea)
 
-To set up an experiment using the [Vue demo site](https://github.com/VariateApp/variate-vue-demo-saas), update `variate.json` with the following: 
+To set up an experiment using the [Vue demo site](https://github.com/VariateHQ/variate-vue-demo-saas), update `variate.json` with the following: 
 
 ```json
 {
@@ -138,7 +138,7 @@ To set up an experiment using the [Vue demo site](https://github.com/VariateApp/
 ```
 
 #### Update the component being targeted
-[Follow along on GitHub](https://github.com/VariateApp/variate-vue-demo-saas/commit/f3431164e1dc782c19bde681ad74934b5bfdda2d)
+[Follow along on GitHub](https://github.com/VariateHQ/variate-vue-demo-saas/commit/f3431164e1dc782c19bde681ad74934b5bfdda2d)
 
 In the `variate.json` above, the component being targeted is `HomeHero`. That maps to the `HomeHero.vue` component (the area highlighted below): 
 

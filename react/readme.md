@@ -16,7 +16,7 @@ In this quick start, we will be using hooks to provide variate data to component
 :::
 
 ::: tip Clone Demo Site
-  In this guide, we will be using this [React Demo Site](https://github.com/VariateApp/variate-react-demo) to install the Variate plugin. Feel free to install it locally and use it as a playground for the following steps.
+  In this guide, we will be using this [React Demo Site](https://github.com/VariateHQ/variate-react-demo) to install the Variate plugin. Feel free to install it locally and use it as a playground for the following steps.
 :::
 
 ::: tip Context API

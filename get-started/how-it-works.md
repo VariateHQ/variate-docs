@@ -129,4 +129,4 @@ Below is what the Schema looks like with a single, simple experiment, containini
 ```
 
 ## Schema Validation
-To validate your schema (in case you are creating the Schema yourself without the Variate UI), you can use this repo: [VariateApp/variate-schema](https://github.com/VariateApp/variate-schema)
+To validate your schema (in case you are creating the Schema yourself without the Variate UI), you can use this repo: [VariateHQ/variate-schema](https://github.com/VariateHQ/variate-schema)
